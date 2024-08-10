@@ -5,6 +5,8 @@ ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "io.github"
 ThisBuild / organizationName := "agaro"
 
+releaseProcess := releaseProcess.value.filterNot(_ == ReleaseTransformations.publishArtifacts)
+
 lazy val root = (project in file("."))
   .settings(
     name := "full-service",
